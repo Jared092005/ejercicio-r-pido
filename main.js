@@ -14,7 +14,7 @@ cuentaA = cuentaA - cuentaB;
 console.log(`El nuevo valor de la cuenta A es ${cuentaA}`);
 
 //validador digital
-let nivelJugador = parseInt(prompt(`Qué nivel eres?`));
+/* let nivelJugador = parseInt(prompt(`Qué nivel eres?`));
 let puntosJugador = parseInt(prompt(`Ingresa tu cantidad de puntos:`));
 let paseVip = prompt(`Tienes el pase Vip? (si/no)`);
 
@@ -28,6 +28,27 @@ function validadorDigital(nivel, puntos, pase) {
   } else {
     console.log(`Nivel insuficiente`);
   }
+} */
+
+/* validadorDigital(nivelJugador, puntosJugador, paseVip); */
+
+//simulador de combate
+let puntosDeVida;
+let monstruo;
+
+let danoRecibido = 0;
+
+function calcularVida(vida, dano) {
+  vida = parseInt(prompt(`Ingrese los puntos de salud que tienes?`));
+  for (let i = 0; i < 3; i++) {
+    dano = parseInt(prompt(`Cantidad de daño del monstruo`));
+    danoRecibido = vida - dano;
+  }
+  if (vida <= 10) {
+    alert(`¡Peligro crítico!`);
+  } else {
+    alert(`Sobreviviste!!`);
+  }
 }
 
-validadorDigital(nivelJugador, puntosJugador, paseVip);
+calcularVida(puntosDeVida, monstruo);
