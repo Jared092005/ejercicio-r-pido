@@ -36,13 +36,11 @@ function validadorDigital(nivel, puntos, pase) {
 let puntosDeVida;
 let monstruo;
 
-let danoRecibido = 0;
-
 function calcularVida(vida, dano) {
   vida = parseInt(prompt(`Ingrese los puntos de salud que tienes?`));
   for (let i = 0; i < 3; i++) {
     dano = parseInt(prompt(`Cantidad de daño del monstruo`));
-    danoRecibido = vida - dano;
+    vida = vida - dano;
   }
   if (vida <= 10) {
     alert(`¡Peligro crítico!`);
